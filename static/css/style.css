@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    position: relative;
+    display: flex;
+    height: 100%;
+    background: linear-gradient(45deg, rgb(68, 68, 68) 25%, rgb(29, 29, 29) 75%);
+}
+
+
+.wrapper-login {
+    position: absolute;
+    width: 360px;
+    height: 380px;
+    background-color: rgb(218, 211, 204);
+    border: 2px solid rgb(142, 131, 131);
+    border-radius: 20px;
+    box-shadow: 0 0 8px rgb(71, 70, 49);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+
+.form-box h3 {
+    font-family: 2em;
+    color: rgb(78, 82, 79);
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid black;
+    margin: 35px 0;
+}
+
+.error {
+    margin-top: 10px;
+    color: rgb(99, 7, 53);
+    font-size: 14px;
+}
+
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: rgb(34, 30, 30);
+    font-weight: 500;
+    pointer-events: none;
+    transition: -5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: rgb(57, 59, 64);
+    font-weight: 300;
+    padding: 0 50px 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: black;
+    line-height: 57px;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: rgb(175, 190, 40);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    color: antiquewhite;
+    margin-top: 10px;
+}
+
+.btn-logout {
+    width: 100px;
+    float: right;
+}
+
+/* svg */
+
+.wrapper-statistic {
+    padding: 40px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 20% 70%;
+    grid-template-areas:
+        'header logout'
+        'xp audit';
+    overflow: hidden; 
+}
+
+.hello {
+    grid-area: header;
+}
+
+.xp_progression {
+    grid-area: xp;
+    background-color: rgb(107, 110, 109);
+    border-radius: 10px;
+    margin: 0px 40px 0px 0px;
+    padding: 30px 30px;
+}
+
+.circle {
+    cursor: pointer;
+    transition: .2s stroke-width;
+}
+
+.tooltip {
+   position: absolute;
+    padding: 10px;
+    background-color: rgb(175, 190, 40);
+    border-radius: 10px;
+    font-size: small;
+}
+
+.text {
+    font-size: 10px;
+    fill: #96a79d;
+}
+
+#xp_chart {
+    width: 100%;
+    height: 440px;
+}
+
+.audits_ratio {
+    position: relative;
+    grid-area: audit;
+    background-color: rgb(107, 110, 109);
+    border-radius: 10px;
+    padding: 30px 30px;
+}
+
+#audit_chart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    height: 60%;
+    margin: 20px 0px;
+}
+
+#audit_chart svg{
+display: block;
+margin: 0 auto;
+}
+
+.circle_front{
+    fill: none;
+    stroke: rgb(136, 185, 136);
+    stroke-width: 50px;
+    stroke-dasharray: 157; /* 157 = 2pr */
+}
+
+.circle_back{
+    fill: rgb(129, 145, 155);
+}
+
+.logout {
+    grid-area: logout;
+}
+
+h1 {
+    color: rgb(175, 190, 40);
+    font-weight: 100;
+    font-size: 50px
+}
+
+h4 {
+    font-size: 24px;
+    color: #8a8a8b;
+}
+
+h2 {
+    font-weight: 100;
+    font-size: 34px;
+    color: rgb(175, 190, 40);
+    margin: 20px 0px;
+}
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphQL</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src ="https://unpkg.com/@popperjs/core@2" defer></script>
+    <script src="main.js" defer></script>
+    <script src="functions.js" defer></script>
+</head>
+
+<body>
+    <form id="login">
+        <div class="wrapper-login">
+            <div class="form-box login">
+                <h3>Login</h3>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="finger-print-outline"></ion-icon></span>
+                    <input id="credentials" required>
+                    <label for="email">Email or Username</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="key-outline"></ion-icon></span>
+                    <input type="password" id="password" required>
+                    <label for="password">Password</label>
+                    <p id="error" class="error"></p>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="wrapper-statistic">
+        <div class="hello">
+            <h1 id="wc"> </h1>
+        </div>
+        <div class="xp_progression">
+            <h4> XP progression</h4>
+            <h2 id="xp_total"></h2>
+            <div id="xp_chart">
+                <svg id="chart"></svg>
+            </div>
+        </div>
+            <div class="audits_ratio">
+                <h4>Audits ratio</h4>
+                <h2 id="audit_total"></h2>
+                    <div id="audit_chart">
+                        <svg id="circle_chart" height="260" width="260" viewBox="0 0 100 100" >
+                            <circle r="50" cx="50" cy="50" class="circle_back" />
+                            <circle r="25" cx="50" cy="50" class="circle_front"  />
+                        </svg>
+                    </div>
+                <h2 id="audit_result" style="margin-top: 50px;"></h2>
+            </div>
+        <div class="logout">
+            <button id="logout" type="button" class="btn btn-logout">Logout</button>
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>

@@ -59,7 +59,7 @@ const makeGraphQLRequest = async () => {
 const creationGraphAuditRation = (recieved, done) => {
 
     let total = (done/recieved).toFixed(1);
-    setData.style.strokeDashoffset = 100 / total
+    setData.style.strokeDashoffset =  (157 /(recieved+done))*done 
 
     auditTotal.textContent = `Total: ${total}`
     if (total > 1.1) {

@@ -46,7 +46,7 @@ const  creationStatisticPage = (data) => {
     statisticPage.style.display = "grid";
     // 1. Add data
     const welcome = document.getElementById('wc');
-    welcome.textContent = `WELCOM, ${data.data.user[0].attrs.firstName} ${data.data.user[0].attrs.lastName}`
+    welcome.textContent = `WELCOME, ${data.data.user[0].attrs.firstName} ${data.data.user[0].attrs.lastName}`
     // 2. XP gragh
     creationGraphXPRation(data.data.user[0].transactions);
     // 3. Audit gragh

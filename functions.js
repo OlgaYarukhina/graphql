@@ -53,7 +53,6 @@ const makeGraphQLRequest = async () => {
 
 
 const creationGraphAuditRation = (recieved, done) => {
-
     let total = (done/recieved).toFixed(1);
     setData.style.strokeDashoffset =  (157 /(recieved+done))*done 
 
@@ -178,12 +177,8 @@ class LineChart extends Chart {
             viewBox: `0 0 ${this.maxWidth} ${this.maxHeight}`
         })
 
-
-
         // create axises
-
         const $legendXLine = this.createAxisXSeparator()
-
 
         // create line of gragh
         const $chartLine = this.createChartLine();
@@ -234,7 +229,6 @@ class LineChart extends Chart {
 
 
 const creationGraphXPRation = (data) => {
-
 
     let totalXP = 0;
     let monthTotalXP = 0;
@@ -311,10 +305,6 @@ const creationGraphXPRation = (data) => {
         }
         relsults[i].y = (monthTotalXP / 1000).toFixed(1)
     }
-
-    console.log(monthTotalXP)
-    console.log(relsults)
-
     const $xpchartContainer = document.getElementById('xp_chart')
     new LineChart(relsults, $xpchartContainer).create()
 };

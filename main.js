@@ -39,9 +39,6 @@ loginForm.addEventListener('submit', async (e) => {
     }
 });
 
-
-
-
 const  creationStatisticPage = (data) => {
     loginForm.style.display = 'none';
     statisticPage.style.display = "grid";
@@ -52,7 +49,6 @@ const  creationStatisticPage = (data) => {
     creationGraphXPRation(data.data.user[0].transactions);
     // 3. Audit gragh
    creationGraphAuditRation(data.data.user[0].totalDown, data.data.user[0].totalUp);
-
 }
 
 

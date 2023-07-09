@@ -25,6 +25,7 @@ loginForm.addEventListener('submit', async (e) => {
         if (response.ok) {
             const token = await response.json();
             localStorage.setItem('jwt', token);             // Store the JWT in local storage for future API requests
+            deleteError();
             let data = await makeGraphQLRequest();
            creationStatisticPage(data);
 

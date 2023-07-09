@@ -8,10 +8,6 @@ const circleChart = document.getElementById('circle_chart')
 const xpTotal = document.getElementById('xp_total');
 
 
-const displayError = (message) => {
-    errorContainer.textContent = message;
-    errorContainer.style.display = 'block';
-}
 
 const makeGraphQLRequest = async () => {
 
@@ -323,3 +319,14 @@ const creationGraphXPRation = (data) => {
     const $xpchartContainer = document.getElementById('xp_chart')
     new LineChart(relsults, $xpchartContainer).create()
 };
+
+
+const displayError = (message) => {
+    errorContainer.textContent = message;
+    errorContainer.style.display = 'block';
+}
+
+const deleteError = () => {
+    errorContainer.textContent = "";
+    errorContainer.style.display = 'none';
+}

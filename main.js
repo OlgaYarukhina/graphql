@@ -60,4 +60,6 @@ logoutButton.addEventListener('click', () => {
     localStorage.removeItem('jwt');
     statisticPage.style.display = 'none';
     loginForm.style.display = 'flex';
+    userCredentialInput.value ="";
+    passwordInput.value ="";
 });
